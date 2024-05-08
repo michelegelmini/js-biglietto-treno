@@ -38,11 +38,18 @@ if (!(isNaN(km) || isNaN(age))) {
 
     let discountedPrice = (price - (price * discount / 100)).toFixed(2);
 
+
     kmOutput.innerHTML = `${km}`
     messageWithDiscountOutput.innerHTML = `${messageWithDiscount}`
     priceOutput.innerHTML = `€${price}`
     discountOutput.innerHTML = `${discount}`
-    discountedPriceOutput.innerHTML = `€${(price * discount / 100).toFixed(2)}`
+
+    if (discount === 0) {
+        discountedPriceOutput.innerHTML = '€0';
+    } else {
+        discountedPriceOutput.innerHTML = `€${(price * discount / 100).toFixed(2)}`
+
+    }
     totalPriceOutput.innerHTML = `€${discountedPrice}`
 
 
