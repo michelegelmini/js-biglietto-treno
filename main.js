@@ -8,7 +8,8 @@ let priceOutput = document.getElementById('price');
 let discountOutput = document.getElementById('discount');
 let discountedPriceOutput = document.getElementById('discounted-price');
 let totalPriceOutput = document.getElementById('total-price');
-let messageWithDiscount = document.getElementById('messageWithDiscount');
+let messageWithDiscountOutput = document.getElementById('messageWithDiscount');
+let kmOutput = document.getElementById('km-travel');
 let discount = 0;
 
 /* check inserimento valori */
@@ -37,7 +38,8 @@ if (!(isNaN(km) || isNaN(age))) {
 
     let discountedPrice = (price - (price * discount / 100)).toFixed(2);
 
-    messageWithDiscount.innerHTML = `${messageWithDiscount}`
+    kmOutput.innerHTML = `${km}`
+    messageWithDiscountOutput.innerHTML = `${messageWithDiscount}`
     priceOutput.innerHTML = `€${price}`
     discountOutput.innerHTML = `${discount}`
     discountedPriceOutput.innerHTML = `€${(price * discount / 100).toFixed(2)}`
@@ -49,7 +51,7 @@ if (!(isNaN(km) || isNaN(age))) {
 
 } else {
     console.log('inserisci due numeri');
-    ticketOutput.innerHTML = `Non hai inserito dei numeri`
+    document.getElementById('card-body').innerHTML = 'Non hai inserito dei numeri'
 }
 
 
