@@ -13,16 +13,33 @@
 
     <body>
         <div class="container-fluid">
-            <div class="card position-absolute top-50 start-50 translate-middle" style="width: 18rem;">
-                <img src="img/train.webp" class="card-img-top" alt="...">
+            <div class="card position-absolute top-50 start-50 translate-middle" style="width: 20rem;">
+                <img src="img/train.webp" class="card-img-top p12
+                " alt="...">
                 <div class="card-body" id="card-body">
                     <h5 class="card-title">Ecco il tuo biglietto per un viaggio di <span id="km-travel"></span> km!</h5>
                     <p id="messageWithDiscount"></p>
-                    <ul>
-                        <li>Prezzo: <strong id="price"></strong></li>
-                        <li>Sconto <span id="discount"></span>%: <strong id="discounted-price"></strong></li>
-                        <li>Totale: <strong id="total-price"></strong></li>
+
+                    <ul class="list-group">
+
+                        <li class="list-group-item">Prezzo: <strong id="price"></strong></li>
+                        <li class="list-group-item">Sconto <span id="discount"></span>%: <strong
+                                id="discounted-price"></strong></li>
+                        <li class="list-group-item active">Totale: <strong id="total-price"></strong></li>
+
                     </ul>
+
+                    <br>
+
+
+
+
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button type="button" class="btn btn-primary" onClick="window.location.reload();">Comprane
+                            ancora!</button>
+                    </div>
+
+
                 </div>
             </div>
         </div>

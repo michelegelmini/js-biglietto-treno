@@ -16,17 +16,20 @@ let discount = 0;
 if (!(isNaN(km) || isNaN(age))) {
 
 
-
+    /* check sconto */
     if (age <= 18) {
         console.log('sconto 20%');
         discount = 20;
-        messageWithDiscount = `Congratulazioni! Sei minorenne quindi hai diritto ad uno sconto del 20%!`
+        messageWithDiscount = `Congratulazioni! Hai solo ${age} anni, quindi hai diritto ad uno sconto del 20%!`
 
+
+    } else if (age > 150) {
+        document.getElementById('card-body').innerHTML = 'Sicuro di essere così vecchio?'
 
     } else if (age >= 65) {
         console.log('sconto 40%');
         discount = 40;
-        messageWithDiscount = `Congratulazioni! Sei vecchio quindi hai diritto ad uno sconto del 40%!`
+        messageWithDiscount = `Congratulazioni! Hai ${age} anni, quindi hai diritto ad uno sconto del 40%!`
 
 
     } else {
@@ -38,6 +41,7 @@ if (!(isNaN(km) || isNaN(age))) {
 
     let discountedPrice = (price - (price * discount / 100)).toFixed(2);
 
+    /* stampa valori */
 
     kmOutput.innerHTML = `${km}`
     messageWithDiscountOutput.innerHTML = `${messageWithDiscount}`
@@ -48,7 +52,6 @@ if (!(isNaN(km) || isNaN(age))) {
         discountedPriceOutput.innerHTML = '€0';
     } else {
         discountedPriceOutput.innerHTML = `€${(price * discount / 100).toFixed(2)}`
-
     }
     totalPriceOutput.innerHTML = `€${discountedPrice}`
 
