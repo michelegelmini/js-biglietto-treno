@@ -25,6 +25,7 @@ if (!(isNaN(km) || isNaN(age))) {
 
     } else if (age > 150) {
         document.getElementById('card-body').innerHTML = 'Sicuro di essere così vecchio?'
+        document.getElementById('button').innerHTML = 'Riprova'
 
     } else if (age >= 65) {
         console.log('sconto 40%');
@@ -61,7 +62,8 @@ if (!(isNaN(km) || isNaN(age))) {
 
 } else {
     console.log('inserisci due numeri');
-    document.getElementById('card-body').innerHTML = 'Non hai inserito dei numeri'
+    document.getElementById('card-body').innerHTML = 'Non hai inserito dei numeri!'
+    document.getElementById('button').innerHTML = 'Riprova'
 }
 
 
