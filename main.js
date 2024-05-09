@@ -1,4 +1,3 @@
-console.log('hello!');
 
 const km = parseInt(Number(prompt('Quanti km vuoi viaggiare?')));
 const age = parseInt(Number(prompt('Quanti anni hai?')));
@@ -18,7 +17,7 @@ if (!(isNaN(km) || isNaN(age))) {
 
     /* check sconto */
     if (age <= 18) {
-        console.log('sconto 20%');
+
         discount = 20;
         messageWithDiscount = `Congratulazioni! Hai solo ${age} anni, quindi hai diritto ad uno sconto del 20%!`
 
@@ -28,14 +27,13 @@ if (!(isNaN(km) || isNaN(age))) {
         document.getElementById('button').innerHTML = 'Riprova'
 
     } else if (age >= 65) {
-        console.log('sconto 40%');
+
         discount = 40;
         messageWithDiscount = `Congratulazioni! Hai ${age} anni, quindi hai diritto ad uno sconto del 40%!`
 
 
     } else {
-        console.log('niente sconto');
-        console.log(price);
+
         discount = 0;
         messageWithDiscount = ''
     }
@@ -44,10 +42,10 @@ if (!(isNaN(km) || isNaN(age))) {
 
     /* stampa valori */
 
-    kmOutput.innerHTML = `${km}`
-    messageWithDiscountOutput.innerHTML = `${messageWithDiscount}`
+    kmOutput.innerHTML = km
+    messageWithDiscountOutput.innerHTML = messageWithDiscount
     priceOutput.innerHTML = `€${price}`
-    discountOutput.innerHTML = `${discount}`
+    discountOutput.innerHTML = discount
 
     if (discount === 0) {
         discountedPriceOutput.innerHTML = '€0';
