@@ -12,25 +12,45 @@
     </head>
 
     <body>
-        <div class="container-fluid">
-            <div class="card position-absolute top-50 start-50 translate-middle" style="width: 20rem;">
-                <img src="img/train.webp" class="card-img-top p12
-                " alt="...">
-                <div class="card-body">
-                    <div id="card-body">
-                        <h5 class="card-title">Ecco il tuo biglietto per un viaggio di <span id="km-travel"></span> km!
-                        </h5>
-                        <p id="messageWithDiscount"></p>
+        <div class="container-sm px-5 my-5">
+            <div class="row justify-content-center">
+                <div class="col-6 justify-content-center">
+                    <form action="" method="get" id="form-main">
+                        <label for="user-age">Età</label>
+                        <input class='form-control mb-2' type="number" name="age" id="user-age">
 
-                        <ul class="list-group">
+                        <label for="user-km" class="form-label">Per quanti km vuoi viaggiare? <strong
+                                class="km-counter"></strong>km</label>
+                        <input type="range" class="form-range mb-3" min="0" max="500" value="0" id="user-km">
 
-                            <li class="list-group-item">Prezzo: <strong id="price"></strong></li>
-                            <li class="list-group-item">Sconto <span id="discount"></span>%: <strong
-                                    id="discounted-price"></strong></li>
-                            <li class="list-group-item active">Totale: <strong id="total-price"></strong></li>
+                        <div class="d-grid gap-2 col-6 mx-auto mb-3">
+                            <button type="submit" class="btn btn-primary mx-auto">Invia!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card">
+                    <!--  <img src="img/train.webp" class="card-img-top p12
+                " alt="..." style="width: 20rem;;"> -->
+                    <div class="card-body">
+                        <div id="card-body">
+                            <h5 class="card-title">Ecco il tuo biglietto per un viaggio di <span id="km-travel"></span>
+                                km!
+                            </h5>
+                            <p id="messageWithDiscount"></p>
 
-                        </ul>
+                            <ul class="list-group">
+
+                                <li class="list-group-item">Prezzo: <strong id="price"></strong></li>
+                                <li class="list-group-item">Sconto <span id="discount"></span>%: <strong
+                                        id="discounted-price"></strong></li>
+                                <li class="list-group-item active">Totale: <strong id="total-price"></strong></li>
+
+                            </ul>
+                        </div>
                     </div>
+
 
                     <br>
 
